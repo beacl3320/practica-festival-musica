@@ -1,0 +1,81 @@
+@use 'globales';
+@use 'variables';
+@use 'mixins';
+
+.lineup{
+    background-color: variables.$negro;
+    padding: 5rem 0;
+
+    h3, p{
+        text-align: center;
+        color: variables.$rosa;
+    }
+    .dia{
+        text-transform: uppercase;
+        margin: 5rem 0;
+    }
+}
+
+.escenarios-contenedor{
+    @include mixins.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+    }
+
+    p{
+        color: variables.$negro;
+    }
+
+}
+
+.escenario{
+    padding-top: 2rem;
+
+    p{
+        &:after{
+            content: '';
+            display: block;
+            width: 20rem;
+            height: 10rem;
+            background-size: 15rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 2rem auto 0 auto;
+        }
+    }
+}
+
+.guitarra .nombre-escenario:after{
+    background-image: url(/assets/img/icono_rock.png);
+}
+
+.auricular .nombre-escenario:after{
+    background-image: url(/assets/img/icono_edm.png);
+}
+
+.calendario{
+    @include mixins.resetear-lista;
+    li{
+        padding: 1rem;
+        font-weight: 700;
+        span{
+            font-weight: 400;
+        }
+    }
+}
+
+.bg-amarillo{
+    background-color: variables.$verde;
+
+    li:nth-child(odd) {
+        background-color:  darken(variables.$verde, 15%);
+    }
+}
+
+.bg-verde{
+    background-color: variables.$verde;
+    li:nth-child(odd) {
+        background-color:  darken(variables.$verde, 10%);
+    }
+}
