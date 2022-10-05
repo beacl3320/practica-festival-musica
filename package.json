@@ -1,0 +1,26 @@
+{
+  "name": "festival_musica",
+  "version": "1.0.0",
+  "description": "Proyecto con Gulp, Sass y Htm",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beacl3320/practica-festival-musica.git"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Beatriz Carpio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beacl3320/practica-festival-musica/issues"
+  },
+  "homepage": "https://github.com/beacl3320/practica-festival-musica#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
