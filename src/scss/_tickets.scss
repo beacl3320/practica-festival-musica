@@ -1,0 +1,69 @@
+@use 'globales';
+@use 'variables';
+@use 'mixins';
+
+.tickets{
+    background-color: variables.$negro;
+    color: variables.$rosa;
+    padding: 5rem 0;
+
+    & h3{
+        text-align: center;
+    }
+
+    .contenedor-tickets{
+        @include mixins.tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5rem;
+        }
+    }
+}
+
+.pase{
+
+    .nombre-pase{
+        text-align: center;
+        font-size: 2.4rem;
+        color: variables.$blanco;
+        margin: 2rem 0 1rem;
+        font-weight: 700;
+        @include mixins.tablet {
+            margin: 0 0 1rem;
+        }
+    }
+
+    &-cabecera,
+    &-pie{
+        text-align: center;
+        padding: .5rem;
+    }
+
+
+    &-cabecera{
+        background-color: variables.$rosa;
+        p{
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+    }
+
+    &-body{
+        background-color: variables.$verde;
+
+        ul li{
+            list-style: none;
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+
+    &-pie{
+        background-color: variables.$rosa;
+        p{
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+    }
+}
+

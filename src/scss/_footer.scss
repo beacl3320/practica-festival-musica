@@ -1,0 +1,13 @@
+@use 'globales';
+@use 'variables';
+
+.site-footer{
+    background-color: variables.$rosa;
+    padding: 1rem;
+
+    p{
+        color: variables.$negro;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+}
