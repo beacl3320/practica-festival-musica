@@ -4,6 +4,16 @@
 .header {
     background-color: variables.$negro;
 
+    @include mixins.tablet {
+        &.fijo{
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: 0.1rem 0.2rem 0.3rem rgb(104, 101, 101);
+        }
+    }
+
     h1 {
         color: variables.$blanco;
         text-align: center;

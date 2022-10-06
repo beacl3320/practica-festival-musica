@@ -1,6 +1,15 @@
 .header {
   background-color: #000000;
 }
+@media (min-width: 768px) {
+  .header.fijo {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem rgb(104, 101, 101);
+  }
+}
 .header h1 {
   color: #FFFFFF;
   text-align: center;
@@ -59,6 +68,9 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
+}
+body.body-scroll {
+  padding-top: 8.6rem;
 }
 
 p {
@@ -358,7 +370,7 @@ img {
 
 .site-footer {
   background-color: #F53756;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 .site-footer p {
   color: #000000;
