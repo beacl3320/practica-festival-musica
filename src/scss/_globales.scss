@@ -1,4 +1,5 @@
 @use 'variables' ;
+@use 'mixins';
 
 html {
     font-size: 62.5%;
@@ -15,9 +16,12 @@ body {
     font-family: variables.$fuente_principal;
     font-size: 1.6rem;
 
-    &.body-scroll{
-        padding-top: 8.6rem;
+    @include mixins.tablet {
+        &.body-scroll{
+            padding-top: 8.6rem;
+        }
     }
+    
 }
 
 p {
@@ -27,7 +31,7 @@ p {
 }
 .contenedor {
     width: 95%;
-    max-width: 120rem;
+    max-width: 140rem;
     margin: 0 auto;
 }
 a {
@@ -45,6 +49,9 @@ h2 {
 }
 h3 {
     font-size: 3rem;
+    @include mixins.tablet {
+        font-size: 5rem;
+    }
 }
 
 img{

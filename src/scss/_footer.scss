@@ -2,11 +2,11 @@
 @use 'variables';
 
 .site-footer{
-    background-color: variables.$rosa;
+    background-color: variables.$negro;
     padding: .8rem;
 
     p{
-        color: variables.$negro;
+        color: variables.$rosa;
         text-align: center;
         font-size: 1.4rem;
     }

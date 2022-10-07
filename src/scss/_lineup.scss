@@ -5,6 +5,9 @@
 .lineup{
     background-color: variables.$negro;
     padding: 5rem 0;
+    @include mixins.tablet {
+        padding: 10rem 0;
+    }
 
     h3, p{
         text-align: center;

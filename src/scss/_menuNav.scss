@@ -1,0 +1,128 @@
+@use 'variables';
+@use 'mixins';
+
+.header {
+    background-color: variables.$negro;
+
+    @include mixins.tablet {
+        &.fijo{
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: 0.1rem 0.2rem 0.3rem rgb(104, 101, 101);
+        }
+    }
+
+    h1 {
+        color: variables.$blanco;
+        font-size: 3rem;
+        margin: 0;
+        @include mixins.tablet {
+            font-size: 3rem;
+        }
+    }
+
+    .contenido-header{
+        padding: 2rem;
+        @include mixins.tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+    }
+}
+
+
+/* NAVIGATION */
+/* nav{
+    width: 100%;
+    padding: 20px 0;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.4s ease;
+} */
+
+.navbar{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.navbar__menu{
+    display: flex;
+    gap: 10px;
+}
+
+.navbar__menu a{
+    font-size: 1.8rem;
+    color: #02182c;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    color: variables.$blanco;
+    display: block;
+    text-align: center;
+    @include mixins.tablet {
+            margin: 0;
+        }
+        &:hover{
+            color:variables.$rosa;
+        }
+}
+
+/* SIDE NAVIGATION MENU BUTTON CSS */
+.navbar__btn, .navbar__btn-cancel{
+    position: absolute;
+    color: variables.$blanco;
+    font-size: 4rem;
+    right: 30px;
+    top: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 750px) {
+    .navbar__menu{
+        position: absolute;
+        right: 100%;
+        top: 0;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        background: variables.$negro;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 20px;
+        transition: all 0.5 ease;
+        z-index: 2;
+    }
+
+    .navbar.active .navbar__menu{
+        right:0;
+        font-size: 3rem;
+    }
+
+    .navbar__menu a{
+        display: block;
+        margin: 10px 0;
+        font-size: 23px;
+        color: variables.$blanco;
+    }
+
+    .navbar__btn, .navbar__btn-cancel{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+/* https://codepen.io/inavarrov/pen/ExJzeb */

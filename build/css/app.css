@@ -12,11 +12,12 @@
 }
 .header h1 {
   color: #FFFFFF;
-  text-align: center;
+  font-size: 3rem;
+  margin: 0;
 }
 @media (min-width: 768px) {
   .header h1 {
-    margin: 0;
+    font-size: 3rem;
   }
 }
 .header .contenido-header {
@@ -30,28 +31,87 @@
   }
 }
 
-@media (min-width: 768px) {
-  .navegacion-principal {
-    display: flex;
-    gap: 2rem;
-  }
+/* NAVIGATION */
+/* nav{
+    width: 100%;
+    padding: 20px 0;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.4s ease;
+} */
+.navbar {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
 }
-.navegacion-principal a {
+
+.navbar__menu {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar__menu a {
+  font-size: 1.8rem;
+  color: #02182c;
+  font-weight: bold;
+  transition: all 0.3s ease;
   color: #FFFFFF;
   display: block;
-  font-size: 2.4rem;
   text-align: center;
-  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
-  .navegacion-principal a {
+  .navbar__menu a {
     margin: 0;
   }
 }
-.navegacion-principal a:hover {
+.navbar__menu a:hover {
   color: #F53756;
 }
 
+/* SIDE NAVIGATION MENU BUTTON CSS */
+.navbar__btn, .navbar__btn-cancel {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 4rem;
+  right: 30px;
+  top: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .navbar__menu {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    background: #000000;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+    transition: all 0.5 ease;
+    z-index: 2;
+  }
+  .navbar.active .navbar__menu {
+    right: 0;
+    font-size: 3rem;
+  }
+  .navbar__menu a {
+    display: block;
+    margin: 10px 0;
+    font-size: 23px;
+    color: #FFFFFF;
+  }
+  .navbar__btn, .navbar__btn-cancel {
+    display: block;
+  }
+}
+/* https://codepen.io/inavarrov/pen/ExJzeb */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -69,8 +129,10 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
-body.body-scroll {
-  padding-top: 8.6rem;
+@media (min-width: 768px) {
+  body.body-scroll {
+    padding-top: 8.6rem;
+  }
 }
 
 p {
@@ -81,7 +143,7 @@ p {
 
 .contenedor {
   width: 95%;
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
 }
 
@@ -104,6 +166,11 @@ h2 {
 h3 {
   font-size: 3rem;
 }
+@media (min-width: 768px) {
+  h3 {
+    font-size: 5rem;
+  }
+}
 
 img {
   display: block;
@@ -116,33 +183,36 @@ img {
 
 .video {
   position: relative;
-  max-height: 70rem;
-  min-height: 50rem;
+  width: 100%;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  .video {
+    max-height: 75rem;
+  }
 }
 .video .overlay {
   position: absolute;
   background-color: rgba(102, 51, 153, 0.139);
   height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .video video {
-  width: auto;
+  width: 100%;
   display: block;
-}
-@media (min-width: 768px) {
-  .video video {
-    width: 100%;
-  }
 }
 
 .contenido-video h2 {
   color: #FFFFFF;
-  font-size: 7rem;
+  font-size: 5rem;
   margin: 0;
+}
+@media (min-width: 768px) {
+  .contenido-video h2 {
+    font-size: 7rem;
+  }
 }
 .contenido-video p {
   background-color: #F53756;
@@ -150,7 +220,12 @@ img {
   padding: 1rem 2rem;
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .contenido-video p {
+    font-size: 2.4rem;
+  }
 }
 
 .sobre-festival {
@@ -186,6 +261,11 @@ img {
 .lineup {
   background-color: #000000;
   padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .lineup {
+    padding: 10rem 0;
+  }
 }
 .lineup h3, .lineup p {
   text-align: center;
@@ -252,6 +332,11 @@ img {
 .galeria {
   padding: 5rem 0;
 }
+@media (min-width: 768px) {
+  .galeria {
+    padding: 10rem 0;
+  }
+}
 .galeria h3 {
   text-align: center;
 }
@@ -314,12 +399,18 @@ img {
 }
 
 .tickets {
-  background-color: #000000;
-  color: #F53756;
+  background-color: #4CB8B3;
+  color: #000000;
   padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .tickets {
+    padding: 10rem 0;
+  }
 }
 .tickets h3 {
   text-align: center;
+  color: #000000;
 }
 @media (min-width: 768px) {
   .tickets .contenedor-tickets {
@@ -332,7 +423,7 @@ img {
 .pase .nombre-pase {
   text-align: center;
   font-size: 2.4rem;
-  color: #FFFFFF;
+  color: #000000;
   margin: 2rem 0 1rem;
   font-weight: 700;
 }
@@ -346,14 +437,15 @@ img {
   padding: 0.5rem;
 }
 .pase-cabecera {
-  background-color: #F53756;
+  background-color: #000000;
 }
 .pase-cabecera p {
   text-transform: uppercase;
   font-size: 1.6rem;
+  color: #FFFFFF;
 }
 .pase-body {
-  background-color: #4CB8B3;
+  background-color: #FFFFFF;
 }
 .pase-body ul li {
   list-style: none;
@@ -361,23 +453,25 @@ img {
   padding: 1rem;
 }
 .pase-pie {
-  background-color: #F53756;
+  background-color: #000000;
 }
 .pase-pie p {
   font-size: 2.4rem;
   font-weight: 700;
+  color: #FFFFFF;
 }
 
 .site-footer {
-  background-color: #F53756;
+  background-color: #000000;
   padding: 0.8rem;
 }
 .site-footer p {
-  color: #000000;
+  color: #F53756;
   text-align: center;
   font-size: 1.4rem;
 }
 
+/* @use 'header'; */
 /* @use 'normalize'; */
 
 /*# sourceMappingURL=app.css.map */

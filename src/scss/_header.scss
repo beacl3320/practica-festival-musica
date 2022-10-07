@@ -19,15 +19,16 @@
         text-align: center;
         @include mixins.tablet {
             margin: 0;
+            font-size: 3rem;
         }
     }
 
     .contenido-header{
         padding: 2rem;
         @include mixins.tablet{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         }
     }
 }
@@ -40,7 +41,7 @@
     a {
         color: variables.$blanco;
         display: block;
-        font-size: 2.4rem;
+        font-size: 2rem;
         text-align: center;
         margin-bottom: 1rem;
         @include mixins.tablet {
@@ -51,3 +52,5 @@
         }
     }
 }
+
+

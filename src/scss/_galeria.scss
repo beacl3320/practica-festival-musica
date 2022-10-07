@@ -4,6 +4,9 @@
 
 .galeria{
     padding: 5rem 0;
+    @include mixins.tablet {
+        padding: 10rem 0;
+    }
 
     h3{
         text-align: center;

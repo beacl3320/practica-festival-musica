@@ -5,11 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="build/css/app.css">
     <title>Festival Música</title>
 </head>
 <body>
-    <header class="header">
+   
+    <header class="header" id="header">
+        <nav class="navbar" >
+            <a href="#header"><h1>Festival de Invierno</h1></a>
+            <div class="navbar__menu ">
+                <a href="#artistas">Artistas</a>
+                <a href="#galeria">Galería</a>
+                <a href="#tickets">Tickets</a>
+
+                <div class="navbar__btn-cancel">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+            <div class="navbar__btn">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ORIGINAL NO TOCAR -->
+    <!-- <header class="header">
         <div class="contenedor contenido-header">
             <h1>Festival de Invierno</h1>
             <nav class="navegacion-principal">
@@ -18,7 +39,7 @@
                 <a href="#tickets">Tickets</a>
             </nav>
         </div>
-    </header>
+    </header> -->
 
     <div class="video">
         <div class="overlay">
@@ -187,9 +208,10 @@
     </section>
 
     <footer class="site-footer">
-        <p>Festival de Invierno. Todos los derechos reservados</p>
+        <p>Festival de Invierno 2022. Todos los derechos reservados</p>
     </footer>
 
+    <script src="/src/js/menu.js"></script>
     <script src="/src/js/galeria.js"></script>
     <script src="/src/js/scroll.js"></script>
     <script src="/src/js/navFijo.js"></script>

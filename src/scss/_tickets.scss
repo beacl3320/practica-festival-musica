@@ -3,12 +3,16 @@
 @use 'mixins';
 
 .tickets{
-    background-color: variables.$negro;
-    color: variables.$rosa;
+    background-color:variables.$verde;
+    color: variables.$negro;
     padding: 5rem 0;
+    @include mixins.tablet {
+        padding: 10rem 0;
+    }
 
     & h3{
         text-align: center;
+        color: variables.$negro;
     }
 
     .contenedor-tickets{
@@ -25,7 +29,7 @@
     .nombre-pase{
         text-align: center;
         font-size: 2.4rem;
-        color: variables.$blanco;
+        color: variables.$negro;
         margin: 2rem 0 1rem;
         font-weight: 700;
         @include mixins.tablet {
@@ -41,15 +45,16 @@
 
 
     &-cabecera{
-        background-color: variables.$rosa;
+        background-color: variables.$negro;
         p{
             text-transform: uppercase;
             font-size: 1.6rem;
+            color: variables.$blanco;
         }
     }
 
     &-body{
-        background-color: variables.$verde;
+        background-color: variables.$blanco;
 
         ul li{
             list-style: none;
@@ -59,10 +64,11 @@
     }
 
     &-pie{
-        background-color: variables.$rosa;
+        background-color: variables.$negro;
         p{
             font-size: 2.4rem;
             font-weight: 700;
+            color: variables.$blanco;
         }
     }
 }
