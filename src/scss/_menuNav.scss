@@ -16,11 +16,15 @@
 
     h1 {
         color: variables.$blanco;
-        font-size: 3rem;
+        font-size: 1.8rem;
         margin: 0;
         @include mixins.tablet {
-            font-size: 3rem;
+            font-size: 2.4rem;
         }
+        @include mixins.desktop {
+            font-size: 2.8rem;
+        }
+        
     }
 
     .contenido-header{
@@ -76,11 +80,15 @@
 .navbar__btn, .navbar__btn-cancel{
     position: absolute;
     color: variables.$blanco;
-    font-size: 4rem;
+    font-size: 3rem;
     right: 30px;
-    top: 20px;
+    
     display: none;
     cursor: pointer;
+}
+
+.navbar__btn-cancel{
+top: 20px;
 }
 
 

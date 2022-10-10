@@ -12,12 +12,17 @@
 }
 .header h1 {
   color: #FFFFFF;
-  font-size: 3rem;
+  font-size: 1.8rem;
   margin: 0;
 }
 @media (min-width: 768px) {
   .header h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 990px) {
+  .header h1 {
+    font-size: 2.8rem;
   }
 }
 .header .contenido-header {
@@ -74,11 +79,14 @@
 .navbar__btn, .navbar__btn-cancel {
   position: absolute;
   color: #FFFFFF;
-  font-size: 4rem;
+  font-size: 3rem;
   right: 30px;
-  top: 20px;
   display: none;
   cursor: pointer;
+}
+
+.navbar__btn-cancel {
+  top: 20px;
 }
 
 @media (max-width: 750px) {
@@ -206,10 +214,15 @@ img {
 
 .contenido-video h2 {
   color: #FFFFFF;
-  font-size: 5rem;
+  font-size: 2.6rem;
   margin: 0;
 }
 @media (min-width: 768px) {
+  .contenido-video h2 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 990px) {
   .contenido-video h2 {
     font-size: 7rem;
   }
@@ -217,14 +230,15 @@ img {
 .contenido-video p {
   background-color: #F53756;
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0.8rem;
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 @media (min-width: 768px) {
   .contenido-video p {
     font-size: 2.4rem;
+    padding: 1rem 2rem;
   }
 }
 
